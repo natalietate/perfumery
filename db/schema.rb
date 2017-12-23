@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20171223020447) do
     t.string "perfume_name"
     t.string "size"
     t.integer "rating"
-    t.date "date_worn"
     t.text "description"
     t.string "season"
     t.datetime "created_at", null: false

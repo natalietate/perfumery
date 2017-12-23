@@ -4,7 +4,6 @@ class CreatePerfumes < ActiveRecord::Migration[5.1]
       t.string :perfume_name
       t.string :size
       t.integer :rating
-      t.date :date_worn
       t.text :description
       t.string :season
 

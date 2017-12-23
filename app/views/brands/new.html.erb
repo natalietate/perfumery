@@ -1,0 +1,22 @@
+<h1>Add a Perfume to Your Collection</h1>
+  <%= form_with model: @brand, local: true do |f|  %>
+    <% if @brand.errors.any? %>
+      <div id="explain_error">
+        <h2> Uh oh! <%= pluralize(@brand.errors.count, "error") %> prohibited this boat from being saved: </h2>
+        <ul>
+          <% @brand.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+    <%= f.label "Brand Name:" %>
+    <%= f.text_field :brand_name %>
+    <br>
+    <%= f.label "Brand Website:" %>
+    <%= f.text_field :website %>
+    <br>
+
+  <%= f.submit%>
+  <% end %>
