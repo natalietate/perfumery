@@ -1,0 +1,14 @@
+class CreatePerfumes < ActiveRecord::Migration[5.1]
+  def change
+    create_table :perfumes do |t|
+      t.string :perfume_name
+      t.string :size
+      t.integer :rating
+      t.date :date_worn
+      t.text :description
+      t.string :season
+
+      t.timestamps
+    end
+  end
+end
