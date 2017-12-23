@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171223015731) do
+ActiveRecord::Schema.define(version: 20171223020447) do
 
   create_table "brands", force: :cascade do |t|
     t.string "brand_name"
     t.string "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "perfume_brands", force: :cascade do |t|
+    t.integer "perfume_id"
+    t.integer "brand_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_perfume_brands_on_brand_id"
+    t.index ["perfume_id"], name: "index_perfume_brands_on_perfume_id"
   end
 
   create_table "perfumes", force: :cascade do |t|
