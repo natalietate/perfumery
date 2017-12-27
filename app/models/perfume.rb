@@ -1,3 +1,3 @@
 class Perfume < ApplicationRecord
-  belongs_to :brand, dependent: :destroy
+  belongs_to :brand
 end

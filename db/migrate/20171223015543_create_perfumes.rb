@@ -6,6 +6,8 @@ class CreatePerfumes < ActiveRecord::Migration[5.1]
       t.integer :rating
       t.text :description
       t.string :season
+      t.belongs_to :brand, index: true
+
 
       t.timestamps
     end
