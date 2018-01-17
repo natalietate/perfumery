@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20171223015731) do
   end
 
   create_table "perfumes", force: :cascade do |t|
-    t.string "perfume_name"
+    t.string "name"
     t.string "size"
     t.integer "rating"
     t.text "description"

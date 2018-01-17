@@ -1,7 +1,7 @@
 class CreatePerfumes < ActiveRecord::Migration[5.1]
   def change
     create_table :perfumes do |t|
-      t.string :perfume_name
+      t.string :name
       t.string :size
       t.integer :rating
       t.text :description
