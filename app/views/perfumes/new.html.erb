@@ -18,7 +18,7 @@
     <%= f.text_area :description %>
     <br>
     <%= f.label "Brand:" %>
-    <%= f.collection_select :brand_id, Brand.order(:brand_name), :id, :brand_name%>    
+    <%= f.collection_select :brand_id, Brand.order(:name), :id, :name%>    
     <br>
 
     <%= f.label "Size:" %>
