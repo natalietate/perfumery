@@ -1,8 +1,9 @@
 <h1><%= @brand.name %></h1>
 
 <% @brand.perfumes.each do |perfume| %>
-  <%= perfume.name %> <br>
+  <li><%= link_to perfume.name, brand_perfume_path(@brand, perfume) %> </li>
 <% end %>
 
-Add a perfume:
 <%= render 'perfumes/new' %>
+<br><br>
+<%= link_to 'Home', root_path %>

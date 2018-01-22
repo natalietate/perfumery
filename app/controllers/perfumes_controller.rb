@@ -9,6 +9,7 @@ class PerfumesController < ApplicationController
 
   def show
     @perfume = Perfume.find_by_id(params[:id])
+    get_brand
   end
 
   def create

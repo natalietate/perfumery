@@ -1,10 +1,14 @@
-<%= @perfume.name %>
+Perfume: <%= @perfume.name %>
 <br><br>
-<%= @perfume.size %>
+Size: <%= @perfume.size %>
 <br><br>
-<%= @perfume.description %>
+Description: <%= @perfume.description %>
 <br><br>
-<%= @perfume.season %>
+Season: <%= @perfume.season %>
 <br><br>
-<%= link_to 'Home', root_path %>
-<%= link_to 'Brand', brand_path(@perfume.brand_id) %>
+Brand: <%= @brand.name %>
+<br><br>
+
+
+<%= link_to 'Home', root_path %><br>
+<%= link_to 'Back to Brand', brand_path(@perfume.brand_id) %>
