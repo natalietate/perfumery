@@ -1,15 +1,6 @@
-<h1>Add a Perfume to Your Collection</h1>
-  <%= form_with model: @perfume, local: true do |f|  %>
-    <% if @perfume.errors.any? %>
-      <div id="explain_error">
-        <h2> Uh oh! <%= pluralize(@perfume.errors.count, "error") %> prohibited this perfume from being saved: </h2>
-        <ul>
-          <% @perfume.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-  <% end %>
+<h1>Add a Perfume to Your <%= @brand.name %> Collection: </h1>
+  <%= form_with(model: [@brand, @brand.perfumes.build]) do |f|  %>
+
 
     <%= f.label "Perfume Name:" %>
     <%= f.text_field :name %>
