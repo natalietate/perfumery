@@ -5,4 +5,6 @@
 <%= @perfume.description %>
 <br><br>
 <%= @perfume.season %>
-
+<br><br>
+<%= link_to 'Home', root_path %>
+<%= link_to 'Brand', brand_path(@perfume.brand_id) %>
