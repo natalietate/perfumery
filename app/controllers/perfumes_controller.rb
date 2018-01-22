@@ -12,9 +12,11 @@ class PerfumesController < ApplicationController
   end
 
   def create
-    @perfume = Perfume.new(perfume_params)
+    get_brand
+    @perfume = @brand.perfumes.new(perfume_params)
+    @perfume.rating = 0
     if @perfume.save
-      redirect_to @perfume
+      redirect_to @brand
     else
       render 'new'
     end
@@ -22,6 +24,10 @@ class PerfumesController < ApplicationController
 
   private
 
+  def get_brand
+    @brand = Brand.find(params[:brand_id])
+  end
+  
   def perfume_params
     params.require(:perfume).permit(:name, :size, :rating, :description, :season, :brand_id)
   end
