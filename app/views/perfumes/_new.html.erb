@@ -1,0 +1,19 @@
+<h1>Add a Perfume to Your <%= @brand.name %> Collection: </h1>
+  <%= form_with(model: [@brand, @brand.perfumes.build]) do |f|  %>
+
+
+    <%= f.label "Perfume Name:" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label "Description:" %>
+    <%= f.text_area :description %>
+    <br>
+    <%= f.label "Size:" %>
+    <%= f.select :size, %w[sample dram full-size other] %>
+    <br>
+    <%= f.label "Season:" %>
+    <%= f.select :season, %w[spring summer fall winter] %>
+    <br>
+
+  <%= f.submit%>
+  <% end %>
