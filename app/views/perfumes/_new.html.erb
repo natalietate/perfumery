@@ -8,10 +8,6 @@
     <%= f.label "Description:" %>
     <%= f.text_area :description %>
     <br>
-    <%= f.label "Brand:" %>
-    <%= f.collection_select :brand_id, Brand.order(:name), :id, :name%>    
-    <br>
-
     <%= f.label "Size:" %>
     <%= f.select :size, %w[sample dram full-size other] %>
     <br>

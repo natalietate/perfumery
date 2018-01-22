@@ -15,7 +15,8 @@ class PerfumesController < ApplicationController
     get_brand
     @perfume = @brand.perfumes.new(perfume_params)
     @perfume.rating = 0
-    if @perfume.save
+    @perfume.brand_id = @brand.id
+     if @perfume.save
       redirect_to @brand
     else
       render 'new'
