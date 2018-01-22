@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :perfumes
-  resources :brands
+  resources :brands do
+    resources :perfumes
+  end
 
 
 end
